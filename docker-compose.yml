@@ -1,0 +1,32 @@
+version: '3'
+services:
+  terraform-aws-azure-gcp:
+    container_name: 'terraform-aws-azure-gcp'
+    image: local/terraform-aws-azure-gcp
+    build:
+      context: ./
+      dockerfile: Dockerfile-aws-azure-gcp
+      args:
+        AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-**********}
+        AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-****************}
+        AZURE_ACCESS_KEY_ID: ${AZURE_ACCESS_KEY_ID:-**********}
+        AZURE_SECRET_ACCESS_KEY: ${AZURE_SECRET_ACCESS_KEY:-****************}
+#  terraform-azure:
+#    container_name: 'terraform-azure'
+#    image: local/terraform-azure
+#    build:
+#      context: ./
+#      dockerfile: Dockerfile-azure
+#      args:
+#        AZURE_ACCESS_KEY_ID: ${AZURE_ACCESS_KEY_ID:-**********}
+#        AZURE_SECRET_ACCESS_KEY: ${AZURE_SECRET_ACCESS_KEY:-****************}
+#  terraform-gcp:
+#    container_name: 'terraform-gcp'
+#    image: local/terraform-gcp
+#    build:
+#      context: ./
+#      dockerfile: Dockerfile-gcp
+#      args:
+#        GCP_ACCESS_KEY_ID: ${GCP_ACCESS_KEY_ID:-**********}
+#        GCP_SECRET_ACCESS_KEY: ${GCP_SECRET_ACCESS_KEY:-****************}
+
