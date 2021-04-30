@@ -1,0 +1,8 @@
+aws_region = ""				# e.g. "us-east-1"
+aws_dns_suffix = "" 			# e.g. "compute.internal"
+aws_directory_service_password = "" 	# e.g. "Password123!"
+google_region = "" 			# e.g. "us-central1"
+google_project_id = "" 			# e.g. "sample-project"
+google_service_account_json = "" 	# e.g. "gcp-service-account.json"
+azure_resource_group_name = "" 		# e.g. "resource_group"
+azure_location = "" 			# e.g. "westeurope"
